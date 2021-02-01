@@ -1,0 +1,339 @@
+#header {
+  line-height: 2rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: calc(100vh - 77px);
+  text-shadow: 0.5px 0.5px 0.5px rgba(175, 175, 175, 0.8);
+
+  .jumbotron {
+    padding-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/sport-header.jpg") center/cover;
+    background-repeat: no-repeat;
+    filter: grayscale(40%);
+    filter: opacity(0.8);
+    filter: brightness(1.25);
+  }
+
+  .big-title {
+    padding-top: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Nixie One", cursive;
+    padding-bottom: 2rem;
+  }
+
+  .toparea {
+    margin: 0 0 2.5rem 0;
+  }
+
+  .txt-header {
+    .one {
+      text-align: center;
+      margin-bottom: 0;
+      font-size: 2.75rem;
+      padding: 2rem;
+    }
+    .two {
+      text-align: center;
+      padding: 0 8rem;
+      font-size: 2.25rem;
+      a {
+        font-size: 2.25rem;
+        text-decoration: underline;
+        color: $bleu;
+      }
+    }
+    .img-reduc {
+      img {
+        height: 100px;
+        margin: 0 5rem;
+        width: auto;
+      }
+    }
+    h4 {
+      padding-top: 1rem;
+      font-size: 1.6rem;
+      line-height: 3rem;
+      margin-bottom: 6rem;
+      i {
+        margin: 1.2rem;
+        -webkit-text-stroke: 1px $bleu;
+        color: $bleu;
+        font-size: 1.4rem;
+      }
+      .kirola {
+        font-size: 2rem;
+      }
+    }
+    h1 {
+      font-size: 2.75rem;
+    }
+  }
+
+  .txt-header {
+    border: 2px solid #40494b;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 3rem;
+    min-height: 500px;
+    width: 50%;
+    padding: auto;
+    border-radius: 20px;
+  }
+
+  .head-left {
+    width: 40%;
+  }
+
+  .img-header {
+    width: 55%;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    backdrop-filter: blur(3px);
+    border-radius: 150px;
+  }
+
+  .kirola {
+    font-weight: 700;
+    text-transform: capitalize;
+    color: black;
+    font-family: "Nixie One", cursive;
+    font-size: 2.5rem;
+  }
+
+  /* Scroll mouse */
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  .scroll-down {
+    position: static;
+    z-index: 9999;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    margin: auto;
+    width: 34px;
+    height: 55px;
+  }
+
+  @media screen and (max-width: 1700px) {
+    .scroll-down {
+      top: 500px;
+    }
+  }
+  @include xl {
+    .scroll-down {
+      top: 700px;
+    }
+  }
+  @include md {
+    .txt-header {
+      .img-reduc {
+        img {
+          height: 75px;
+          margin: 0 3rem;
+          width: auto;
+        }
+      }
+    }
+  }
+  @include sm {
+    .toparea {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .txt-header {
+      width: 100%;
+    }
+
+    .head-left {
+      width: 100%;
+    }
+
+    .img-header {
+      width: 75%;
+      height: auto;
+      margin: auto;
+      padding: auto;
+    }
+    .big-title {
+      margin-bottom: 5rem;
+      font-size: 2rem;
+    }
+    .txt-header {
+      h2 {
+        font-size: 1.8rem;
+      }
+      .two {
+        padding: 0 1rem;
+      }
+      .one {
+        font-size: 2rem;
+      }
+    }
+  }
+  @include xs {
+    .txt-header {
+      margin: 0.5rem;
+      h2 {
+        font-size: 2.1rem;
+      }
+      .two {
+        padding: 0 1rem;
+      }
+      .one {
+        font-size: 2.5rem;
+      }
+      .img-reduc {
+        img {
+          height: 50px;
+          margin: 0 2rem;
+          width: auto;
+        }
+      }
+    }
+    .img-header {
+      img {
+        width: auto;
+      }
+    }
+  }
+
+  .mouse {
+    background-color: rgba(202, 198, 243, 0.25);
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 3px solid $bleu;
+    filter: grayscale(0%);
+    filter: opacity(1);
+    border-radius: 25px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    backdrop-filter: blur(10px);
+  }
+
+  .mouse .scroller {
+    width: 4px;
+    height: 10px;
+    border-radius: 35%;
+    background-color: $bleu;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+    -webkit-animation-duration: 2.2s;
+    animation-duration: 2.2s;
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  @-webkit-keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(15px);
+      transform: translateY(15px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(15px);
+      transform: translateY(15px);
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .scroll-down,
+    .mouse,
+    .scroller {
+      display: none;
+    }
+  }
+}
+
+/* button */
+.contact-button {
+  a {
+    line-height: 1.4;
+    padding: 0.75rem;
+    text-decoration: none;
+  }
+  .contact-btn {
+    color: #fff;
+    cursor: pointer;
+    // display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 400;
+    background-color: #e95f55;
+
+    &:hover {
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 1px;
+
+      rect {
+        stroke-width: 5;
+        stroke-dasharray: 15, 225;
+        stroke-dashoffset: 60;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    svg {
+      height: 60px;
+      left: -10px;
+      position: absolute;
+      top: -10px;
+      width: 112%;
+    }
+
+    rect {
+      fill: none;
+      stroke: #e95f55;
+      stroke-width: 2;
+      stroke-dasharray: 490, 0;
+      transition: all 0.35s linear;
+    }
+  }
+}

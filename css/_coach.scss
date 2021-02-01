@@ -1,0 +1,32 @@
+#coach {
+  .coach-img {
+    width: 75%;
+    margin-top: 2.5rem;
+    height: auto;
+  }
+
+  .coach-desc {
+    .title-part {
+      font-size: 2.75rem;
+      font-weight: 900;
+      font-family: "Nixie One", cursive;
+    }
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    h4 {
+      font-size: 2rem;
+      font-style: italic;
+    }
+    li {
+      font-size: 1.8rem;
+      list-style: inside square;
+      padding-left: 2rem;
+      color: $gris;
+    }
+    a {
+      font-size: 1.8rem;
+    }
+  }
+}

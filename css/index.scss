@@ -1,0 +1,19 @@
+@import "responsive";
+@import "reset";
+
+/* PARTIES */
+@import "navbar";
+@import "header";
+@import "coach";
+@import "sportsante";
+@import "fitness";
+@import "prices";
+@import "contact";
+@import "footer";
+
+/* AOS PROPERTIES */
+*[data-aos] {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

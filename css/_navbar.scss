@@ -1,0 +1,138 @@
+nav {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  transition: background;
+  border: 1px solid #353535;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+
+  .container-fluid {
+    backdrop-filter: blur(9px);
+  }
+}
+
+.nav-scroll-active {
+  background-color: white !important;
+}
+
+.topnav {
+  border: none;
+  transition: background;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-collapse {
+  background-color: transparent;
+  transition: background;
+  overflow-x: hidden;
+}
+
+.img-nav {
+  height: 70px;
+  width: auto;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.container-fluid {
+  padding: 1rem 0;
+  .navbar-brand {
+    font-size: 2.9rem;
+    color: black;
+    font-weight: 900;
+    font-family: "Nixie One", cursive;
+    text-transform: capitalize;
+  }
+}
+
+.nav-item {
+  border-bottom: 5px solid transparent;
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  a {
+    color: black;
+    font-size: 2rem;
+
+    &:hover,
+    &:focus {
+      color: black;
+    }
+  }
+}
+
+.nav-link {
+  border-bottom: 5px solid transparent;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(1, 102, 122, 0.25);
+    border-bottom: 5px solid $bleu;
+    color: black;
+  }
+
+  &:focus {
+    border-bottom: 5px solid #48a9c5;
+  }
+}
+
+.active {
+  background-color: rgba(1, 102, 122, 0.25);
+  color: black;
+}
+
+.navbar-default .navbar-nav li:focus {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.navbar-toggler {
+  span {
+    font-size: 2.5rem;
+  }
+}
+
+@include xl {
+  .container-fluid {
+    .navbar-brand {
+      font-size: 2.25rem;
+    }
+  }
+  .nav-item {
+    font-size: 1.7rem;
+  }
+}
+
+@include sm {
+  .topnav {
+    background-color: white !important;
+  }
+  .navbar-collapse {
+    background-color: white !important;
+  }
+}
+
+@include xs {
+  .container-fluid {
+    .navbar-brand {
+      font-size: 1.8rem;
+      padding-top: 0.6rem;
+    }
+  }
+  .navbar-toggler {
+    span {
+      font-size: 1.8rem;
+    }
+  }
+  .img-nav {
+    height: 50px;
+    width: auto;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+  }
+}
